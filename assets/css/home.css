@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: teal;
+    color: white;
+}
+
+.container{
+    background-color: #1a1a2e;
+    width: 400px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container div h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+
+.container div form ul{
+    height: 70vh;
+    overflow: scroll;
+}
+
+.container div form > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container div ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.container div ul li{
+    margin: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 4px;
+    display: flex;
+    align-items : center;
+}
+
+.container div ul li input[type="checkbox"]{
+    width: 10%;
+    height: 20px;
+}
+
+.container div ul li .details{
+    width: 90%;
+}
+
+.container div ul li .details div{
+    margin: 0.2rem 0;
+}
+
+.container div ul li .primary-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container div ul li .secondary-details{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container div ul .Home{
+    background-color: crimson;
+}
+
+.container div ul .Work{
+    background-color: slateblue;
+}
+
+.container div ul .Personal{
+    background-color: orangered;
+}
+
+.container div ul .Other{
+    background: seagreen;
+}
+
+.container div form input{
+    background-color: maroon;
+    color: white;
+}
+
+.container form{
+    padding-top: 6vh;
+    padding: 0.2rem;
+    text-align: center;
+    height: 12vh;
+}
+
+.container form input.btn{
+    color: white;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    margin: 0.1rem;
+}
+
+.container form input.add-task-btn{
+    background-color: #0c9463;
+}
+
+.container form input[type="submit"]:hover{
+    cursor: pointer;
+}

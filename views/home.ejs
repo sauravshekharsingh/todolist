@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>ToDo List</h1>
+            <form action="/delete-items" method="GET">
+                <ul>
+                    <% for (let i of todolist) { %>
+                        <li class="<%= i.category %>">
+                            <input type="checkbox" name="todelete" value="<%= i.id %>">
+                            <div class="details">
+                                <div class="primary-details">
+                                    <p class="task"><%= i.task %></p>
+                                    <p class="category"><%= i.category %></p>
+                                </div>
+                                <div class="secondary-details">
+                                    <p><%= i.dateString.substring(0,10) %></p>
+                                </div>
+                            </div>
+                        </li>
+                    <% } %>
+                </ul>
+                <div>
+                    <%if (todolist.length > 0) { %>
+                        <input type="submit" class="btn delete-task-btn" value="DELETE TASKS">
+                    <% } %>
+                </div>
+            </form>
+        </div>
+        <form action="/create-item" method="POST">
+            <input type="text" class="task" name="task" placeholder="Add New Task">
+            <select name="category" class="category">
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+                <option value="Personal">Personal</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="date" name="date">
+            <input type="submit" class="btn add-task-btn" value="ADD TASK">
+        </form>
+    </div>
+</body>
+</html>
