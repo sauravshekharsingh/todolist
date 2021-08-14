@@ -1,5 +1,5 @@
 # todolist
-This is a simple ToDo List Application built on Node.js and MongoDB.
+Todo List Application built on Node.js, Express and MongoDB
 
 How to run this app?
 1) Clone the repository
