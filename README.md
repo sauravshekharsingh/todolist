@@ -1,8 +1,3 @@
-# todolist
-Todo List Application built on Node.js, Express and MongoDB
+# To-Do List Web App
 
-How to run this app?
-1) Clone the repository
-2) Run the command : npm install
-3) Command in terminal: node index.js
-4) Open "localhost:8000" in your browser.
+Todo List Application built on Node.js, Express and MongoDB performing CRUD operations on the database and EJS view engine for the frontend
